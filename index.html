@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Thilaga's 50-Day Fat Loss</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Poppins',sans-serif;background:#F2F6F5;color:#1C2E2B;min-height:100vh;padding-bottom:90px}
+:root{--g:#0B7B6F;--gl:#E0F5F2;--o:#E8682A;--ol:#FEF0E7;--y:#F5C518;--yl:#FFFBE6;--r:#D63B3B;--card:#fff;--border:#D8ECEA;--muted:#6B8882}
+.hdr{background:linear-gradient(135deg,#0A6D62,#0FA896);padding:22px 18px 16px;color:#fff;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.07);top:-50px;right:-40px}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start}
+.hdr h1{font-size:20px;font-weight:900}
+.hdr .sub{font-size:12px;opacity:.85;font-weight:600;margin-top:2px}
+.goal-pill{background:rgba(255,255,255,.2);border-radius:20px;padding:5px 12px;font-size:11px;font-weight:800;white-space:nowrap}
+.stats{display:flex;gap:8px;margin-top:14px}
+.stat{background:rgba(255,255,255,.15);border-radius:12px;padding:8px 0;flex:1;text-align:center}
+.stat .v{font-size:18px;font-weight:900}
+.stat .l{font-size:9px;opacity:.8;font-weight:700;margin-top:1px}
+.prog-wrap{margin-top:14px}
+.prog-lbl{display:flex;justify-content:space-between;font-size:11px;opacity:.9;font-weight:700;margin-bottom:5px}
+.prog-bar{background:rgba(255,255,255,.22);border-radius:10px;height:9px}
+.prog-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#F5C518,#FFE566);transition:width .8s}
+.tabs{display:flex;background:#fff;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.tab{flex:1;padding:10px 2px 8px;text-align:center;font-size:9px;font-weight:800;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;letter-spacing:.3px;text-transform:uppercase}
+.tab.active{color:var(--g);border-bottom-color:var(--g)}
+.tab i{font-size:16px;display:block;margin-bottom:2px;font-style:normal}
+.panel{display:none;padding:14px}
+.panel.active{display:block}
+.card{background:var(--card);border-radius:16px;padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.045)}
+.card-ttl{font-size:13px;font-weight:800;color:var(--g);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.card-ttl i{font-size:17px;font-style:normal}
+.rule{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px}
+.rule i{font-size:18px;font-style:normal;min-width:26px;text-align:center;margin-top:1px}
+.rule p{font-size:12px;line-height:1.55}
+.rule p strong{color:var(--g)}
+
+/* WORKOUT */
+.wd{background:#fff;border-radius:14px;margin-bottom:10px;border:1px solid var(--border);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.wd-head{display:flex;align-items:stretch}
+.wd-badge{width:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 4px;font-size:10px;font-weight:900;flex-shrink:0}
+.wd-badge .da{font-size:13px;font-weight:900;margin-bottom:2px}
+.wd-badge .em{font-size:20px}
+.mon{background:#E0F5F2;color:#0B7B6F}.tue{background:#FEF0E7;color:#C95A1A}.wed{background:#EEF0FF;color:#3A4AD0}
+.thu{background:#FFF3E0;color:#B06800}.fri{background:#F5EEFF;color:#7B35C0}.sat{background:#FCE8F3;color:#B5367A}.sun{background:#F0FFF4;color:#2E7D52}
+.wd-main{flex:1;padding:12px 12px 0 10px}
+.wd-title{font-size:14px;font-weight:800;margin-bottom:4px}
+.wd-badges{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:5px}
+.wbadge{padding:2px 9px;border-radius:20px;font-size:10px;font-weight:700}
+.bw{background:#E0F5F2;color:#0B7B6F}.bh{background:#FFF0F0;color:#C93B3B}.bz{background:#FEF0E7;color:#C95A1A}.bc{background:#EEF0FF;color:#3A4AD0}.br{background:#F0FFF4;color:#2E7D52}
+.wd-dur{font-size:11px;color:var(--muted);font-weight:700;padding-bottom:10px}
+.wd-body{padding:0 12px 12px 12px;border-top:1px solid #F0F0F0}
+.ex-sec-title{font-size:11px;font-weight:800;color:var(--g);text-transform:uppercase;letter-spacing:.5px;margin:10px 0 6px;padding-bottom:3px;border-bottom:1px solid var(--border)}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #F8F8F8}
+.ex-row:last-child{border-bottom:none}
+.ex-name{font-size:12px;font-weight:600;flex:1;padding-right:8px}
+.ex-sets{background:var(--gl);color:var(--g);padding:3px 8px;border-radius:8px;font-size:11px;font-weight:800;white-space:nowrap}
+.ex-note{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.4}
+.kcal{display:inline-flex;align-items:center;gap:4px;background:var(--ol);color:var(--o);padding:4px 10px;border-radius:8px;font-size:11px;font-weight:800;margin-top:8px}
+
+/* SCHEDULE CARD */
+.sched-card{background:linear-gradient(135deg,#0A6D62,#0FA896);border-radius:16px;padding:16px;margin-bottom:12px;color:#fff}
+.sched-row{display:flex;gap:10px;align-items:flex-start;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.sched-row:last-child{border-bottom:none}
+.sched-time{font-size:11px;font-weight:800;min-width:80px;opacity:.9;padding-top:1px}
+.sched-act{font-size:12px;font-weight:700}
+
+/* MEAL CARDS */
+.week-hdr{background:linear-gradient(135deg,var(--g),#0FA896);border-radius:16px;padding:16px;margin-bottom:12px;color:#fff}
+.week-hdr-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.week-title{font-size:16px;font-weight:900}
+.week-badge{background:rgba(255,255,255,.25);padding:4px 12px;border-radius:20px;font-size:11px;font-weight:800}
+.week-note{font-size:12px;opacity:.9;line-height:1.5}
+.day-meal-card{background:#fff;border-radius:16px;margin-bottom:12px;border:1px solid var(--border);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.day-meal-hdr{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;user-select:none}
+.day-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.day-label{flex:1}
+.day-name{font-size:15px;font-weight:900}
+.day-date{font-size:11px;color:var(--muted);font-weight:600;margin-top:1px}
+.day-toggle{font-size:18px;transition:transform .2s;color:var(--muted)}
+.day-toggle.open{transform:rotate(180deg)}
+.day-meals-body{padding:0 14px 14px;display:none}
+.day-meals-body.open{display:block}
+.meal-row{margin-bottom:16px}
+.meal-row:last-child{margin-bottom:0}
+.meal-time-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.meal-time-icon{font-size:20px}
+.meal-time-lbl{font-size:10px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
+.meal-time-name{font-size:14px;font-weight:900;color:#1C2E2B}
+.meal-items{background:var(--gl);border-radius:12px;padding:10px 12px}
+.meal-item-row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:1px solid rgba(11,123,111,.12)}
+.meal-item-row:last-child{border-bottom:none}
+.qty-badge{background:var(--g);color:#fff;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:800;white-space:nowrap;flex-shrink:0;margin-top:1px;min-width:44px;text-align:center}
+.meal-item-text{font-size:12px;font-weight:600;line-height:1.45;color:#2A4A45}
+.meal-note{margin-top:7px;background:var(--yl);border-radius:8px;padding:7px 10px;font-size:11px;font-weight:700;color:#7A5A00;border-left:3px solid var(--y);line-height:1.5}
+.meal-divider{border:none;border-top:1px dashed var(--border);margin:12px 0}
+.kcal-row{display:flex;justify-content:flex-end;margin-top:6px}
+.kcal-chip{background:var(--ol);color:var(--o);padding:3px 10px;border-radius:20px;font-size:10px;font-weight:800}
+
+/* Snack label */
+.snack-badge{background:#F5EEFF;color:#7B35C0;border-left:3px solid #7B35C0}
+
+.d-mon{background:#0B7B6F}.d-tue{background:#C95A1A}.d-wed{background:#3A4AD0}
+.d-thu{background:#B06800}.d-fri{background:#7B35C0}.d-sat{background:#B5367A}.d-sun{background:#2E7D52}
+
+/* SHOPPING */
+.shop-section{margin-bottom:16px}
+.shop-cat{font-size:11px;font-weight:800;color:var(--o);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.shop-item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:9px 10px;display:flex;align-items:center;gap:8px;cursor:pointer;transition:all .15s}
+.shop-item.bought{background:var(--gl);border-color:#A0D8D2}
+.shop-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;transition:all .15s}
+.shop-cb.on{background:var(--g);border-color:var(--g);color:#fff}
+.shop-name{font-size:12px;font-weight:700}
+.shop-qty{font-size:10px;color:var(--muted);font-weight:700;margin-top:1px}
+
+/* CHECKLIST */
+.cl-day{background:#fff;border-radius:14px;padding:14px;margin-bottom:10px;border:1px solid var(--border)}
+.cl-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cl-title{font-size:14px;font-weight:900}
+.cl-score{font-size:13px;font-weight:800;color:var(--g)}
+.cl-row{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #F5F5F5;cursor:pointer}
+.cl-row:last-child{border-bottom:none}
+.chk{width:23px;height:23px;border-radius:7px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;transition:all .15s}
+.chk.on{background:var(--g);border-color:var(--g);color:#fff}
+.cl-lbl{font-size:13px;font-weight:600}
+.cl-lbl.done{text-decoration:line-through;color:var(--muted)}
+.streak-grid{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:10px 0}
+.sd{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800}
+.sd.done{background:var(--g);color:#fff}.sd.today{background:var(--o);color:#fff;animation:pulse 1.4s infinite}.sd.soon{background:var(--border);color:var(--muted)}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+/* WEIGHT */
+.w-form{display:flex;gap:8px;margin-bottom:12px}
+.w-input{flex:1;padding:12px 14px;border-radius:12px;border:2px solid var(--border);font-size:15px;font-family:'Poppins',sans-serif;font-weight:700;outline:none}
+.w-input:focus{border-color:var(--g)}
+.w-btn{padding:12px 16px;background:var(--g);color:#fff;border:none;border-radius:12px;font-size:14px;font-weight:800;cursor:pointer;font-family:'Poppins',sans-serif}
+.w-entry{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:10px;margin-bottom:5px}
+.w-entry:nth-child(odd){background:var(--gl)}.w-entry:nth-child(even){background:#fff;border:1px solid var(--border)}
+.w-date{font-size:11px;color:var(--muted);font-weight:700}.w-kg{font-size:16px;font-weight:900;color:var(--g)}.w-delta{font-size:11px;font-weight:800}
+.ddown{color:#2E9C5A}.dup{color:var(--r)}
+.ms-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed var(--border)}
+.ms-row:last-child{border-bottom:none}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-top">
+    <div><h1>💪 Thilaga's 50-Day Plan</h1><div class="sub">Starts Apr 27 · Week 1 · Chennai 🌶️</div></div>
+    <div class="goal-pill">Goal −10 to 15 kg</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="v">70</div><div class="l">START kg</div></div>
+    <div class="stat"><div class="v" id="cW">70</div><div class="l">NOW kg</div></div>
+    <div class="stat"><div class="v" id="lW">0.0</div><div class="l">LOST kg</div></div>
+    <div class="stat"><div class="v" id="dN">—</div><div class="l">DAY #</div></div>
+  </div>
+  <div class="prog-wrap">
+    <div class="prog-lbl"><span id="pLbl">Starts Tomorrow!</span><span id="pPct">0%</span></div>
+    <div class="prog-bar"><div class="prog-fill" id="pFill" style="width:0%"></div></div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="show('meals','t1')" id="t1"><i>🍱</i>MEALS</div>
+  <div class="tab" onclick="show('shop','t2')" id="t2"><i>🛒</i>SHOP</div>
+  <div class="tab" onclick="show('workout','t3')" id="t3"><i>🏋️</i>WORKOUT</div>
+  <div class="tab" onclick="show('track','t4')" id="t4"><i>✅</i>TRACK</div>
+  <div class="tab" onclick="show('weight','t5')" id="t5"><i>⚖️</i>WEIGHT</div>
+</div>
+
+<!-- ══════════ MEALS ══════════ -->
+<div class="panel active" id="panel-meals">
+  <div class="week-hdr">
+    <div class="week-hdr-top">
+      <div class="week-title">📅 Week 1 Meal Plan</div>
+      <div class="week-badge">Apr 27 – May 3</div>
+    </div>
+    <div class="week-note">4 meals/day · Breakfast at 10:30 AM · Lunch at 2:30 PM · Snack ~6–7 PM · Dinner by 10 PM · All weights in grams · Scale required ⚖️</div>
+  </div>
+
+  <!-- SCHEDULE CARD -->
+  <div class="sched-card">
+    <div style="font-size:14px;font-weight:900;margin-bottom:10px;">⏰ Your Daily Schedule</div>
+    <div class="sched-row"><div class="sched-time">11:30 PM–12 AM</div><div class="sched-act">Sleep 😴</div></div>
+    <div class="sched-row"><div class="sched-time">6:00–6:30 AM</div><div class="sched-act">Wake up & freshen up</div></div>
+    <div class="sched-row"><div class="sched-time">6:30–7:30 AM</div><div class="sched-act">🚗 Driving class</div></div>
+    <div class="sched-row"><div class="sched-time">7:30–8:00 AM</div><div class="sched-act">Freshen up + Pre-Workout Snack 🍌</div></div>
+    <div class="sched-row"><div class="sched-time">8:00–9:30 AM</div><div class="sched-act">🏋️ GYM</div></div>
+    <div class="sched-row"><div class="sched-time">9:30–10:30 AM</div><div class="sched-act">Rest / Book Reading 📚</div></div>
+    <div class="sched-row"><div class="sched-time">10:30–12:00 PM</div><div class="sched-act">🥣 Freshen up + Breakfast (post-workout)</div></div>
+    <div class="sched-row"><div class="sched-time">12:00–2:00 PM</div><div class="sched-act">📖 Study time</div></div>
+    <div class="sched-row"><div class="sched-time">2:00–2:30 PM</div><div class="sched-act">🍽️ Lunch</div></div>
+    <div class="sched-row"><div class="sched-time">2:30–11:00 PM</div><div class="sched-act">💼 Work (snack included ~6–7 PM)</div></div>
+    <div class="sched-row"><div class="sched-time">By 10:00 PM</div><div class="sched-act">🌙 Dinner</div></div>
+  </div>
+
+  <div class="card" style="background:var(--yl);border-color:#FFD080;">
+    <div class="card-ttl" style="color:#8A6000;"><i>📏</i>Your Daily Gram Guide</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px;">
+      <div style="background:#fff;border-radius:8px;padding:8px;border:1px solid #FFD080;"><div style="font-weight:800;color:var(--g);">🥣 Oats</div><div style="font-weight:700;margin-top:2px;">50g dry</div><div style="font-size:10px;color:var(--muted);">every morning at 10:30 AM</div></div>
+      <div style="background:#fff;border-radius:8px;padding:8px;border:1px solid #FFD080;"><div style="font-weight:800;color:var(--g);">🍚 Rice</div><div style="font-weight:700;margin-top:2px;">100g dry</div><div style="font-size:10px;color:var(--muted);">only at lunch</div></div>
+      <div style="background:#fff;border-radius:8px;padding:8px;border:1px solid #FFD080;"><div style="font-weight:800;color:var(--g);">🐔 Chicken</div><div style="font-weight:700;margin-top:2px;">120g cooked</div><div style="font-size:10px;color:var(--muted);">per meal (non-veg days)</div></div>
+      <div style="background:#fff;border-radius:8px;padding:8px;border:1px solid #FFD080;"><div style="font-weight:800;color:var(--g);">🥛 Milk</div><div style="font-weight:700;margin-top:2px;">150ml</div><div style="font-size:10px;color:var(--muted);">for oats — soak overnight</div></div>
+    </div>
+    <div style="margin-top:8px;padding:8px;background:#fff;border-radius:8px;border:1px solid #FFD080;font-size:11px;font-weight:700;color:#8A6000;">🌙 Soak oats at night before bed → ready for 10:30 AM breakfast</div>
+  </div>
+
+  <!-- MONDAY -->
+  <div class="day-meal-card">
+    <div class="day-meal-hdr" onclick="toggleDay('mon')">
+      <div class="day-dot d-mon"></div>
+      <div class="day-label"><div class="day-name">Monday · Day 1</div><div class="day-date">April 27 · Chest & Back · ~1,200 kcal</div></div>
+      <div class="day-toggle open" id="tog-mon">▼</div>
+    </div>
+    <div class="day-meals-body open" id="day-mon">
+
+      <!-- PRE-WORKOUT SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">⚡</div><div><div class="meal-time-lbl">Pre-Workout Snack · 7:30–8:00 AM</div><div class="meal-time-name">Quick Energy Boost</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 pc</span><span class="meal-item-text">Small banana (approx 80g) — eat 20–30 min before gym for energy</span></div>
+        </div>
+        <div class="meal-note snack-badge">⚡ Light snack only — don't eat heavy before gym. This keeps you fueled without heaviness.</div>
+        <div class="kcal-row"><span class="kcal-chip">~70 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- BREAKFAST -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🥣</div><div><div class="meal-time-lbl">Breakfast · Post-Workout · 10:30–11 AM</div><div class="meal-time-name">Pintola Oats Bowl</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">50g</span><span class="meal-item-text">Pintola High Protein Oats (dry weight — soaked overnight in fridge)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150ml</span><span class="meal-item-text">Low-fat milk (soaked with oats overnight — ready in morning)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">60g</span><span class="meal-item-text">Banana (about ½ a medium banana) sliced on top</span></div>
+          <div class="meal-item-row"><span class="qty-badge">55g</span><span class="meal-item-text">1 whole boiled egg</span></div>
+        </div>
+        <div class="meal-note">🌙 Night prep: measure 50g oats into a bowl, pour 150ml milk, cover and keep in fridge. Ready at 10:30 AM.</div>
+        <div class="kcal-row"><span class="kcal-chip">~310 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- LUNCH -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍽️</div><div><div class="meal-time-lbl">Lunch · 2:00–2:30 PM</div><div class="meal-time-name">Rice + Egg Curry + Veggies</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Raw rice (weigh dry before cooking — gives ~280g cooked)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">110g</span><span class="meal-item-text">2 boiled eggs in onion-tomato curry (no deep fry)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Sambar or toor dal</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Beans poriyal (French beans cut fine, mustard temper, fresh coconut grating on top)</span></div>
+        </div>
+        <div class="meal-note">⚖️ Weigh rice DRY before cooking. 100g dry = ~280g cooked rice.</div>
+        <div class="kcal-row"><span class="kcal-chip">~480 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- EVENING SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍎</div><div><div class="meal-time-lbl">Evening Snack · 6:00–7:00 PM (During Work)</div><div class="meal-time-name">Fruit + Nuts</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 medium</span><span class="meal-item-text">Apple (approx 150g) — wash and carry to work</span></div>
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">15g</span><span class="meal-item-text">10 almonds — carry in a small box</span></div>
+        </div>
+        <div class="meal-note snack-badge">💼 Work snack — keeps hunger away and avoids canteen junk food.</div>
+        <div class="kcal-row"><span class="kcal-chip">~135 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- DINNER -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🌙</div><div><div class="meal-time-lbl">Dinner · By 10:00 PM · No Rice</div><div class="meal-time-name">Chapati + Dal + Curd</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">120g</span><span class="meal-item-text">2 whole wheat chapatis (60g dough each — weigh dough per chapati)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Dal or sabzi (leftover from lunch is fine)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Plain curd (no sugar)</span></div>
+        </div>
+        <div class="meal-note">🚫 Zero rice at dinner. Finish by 10 PM max. Chapati can be made quickly after coming home from work.</div>
+        <div class="kcal-row"><span class="kcal-chip">~320 kcal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUESDAY — FULL VEG -->
+  <div class="day-meal-card">
+    <div class="day-meal-hdr" onclick="toggleDay('tue')">
+      <div class="day-dot d-tue"></div>
+      <div class="day-label"><div class="day-name">Tuesday · Day 2 🌿 Full Veg</div><div class="day-date">April 28 · Zumba + Core · ~1,140 kcal</div></div>
+      <div class="day-toggle" id="tog-tue">▼</div>
+    </div>
+    <div class="day-meals-body" id="day-tue">
+
+      <!-- PRE-WORKOUT -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">⚡</div><div><div class="meal-time-lbl">Pre-Workout Snack · 7:30–8:00 AM</div><div class="meal-time-name">Quick Energy Boost</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 pc</span><span class="meal-item-text">Small banana (approx 80g)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~70 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- BREAKFAST -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🥣</div><div><div class="meal-time-lbl">Breakfast · After Zumba · 10:30–11 AM</div><div class="meal-time-name">Pintola Oats + Curd</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">50g</span><span class="meal-item-text">Pintola oats (soaked overnight in milk)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150ml</span><span class="meal-item-text">Low-fat milk (soaked overnight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">60g</span><span class="meal-item-text">Banana (½ medium) sliced on top</span></div>
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Plain curd (no sugar) on the side — protein boost on veg day</span></div>
+        </div>
+        <div class="meal-note">🌿 Full veg day — curd replaces egg for protein. Zumba burns ~500 kcal so good fueling is important.</div>
+        <div class="kcal-row"><span class="kcal-chip">~330 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- LUNCH -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍽️</div><div><div class="meal-time-lbl">Lunch · 2:00–2:30 PM</div><div class="meal-time-name">Rice + Rajma Curry + Veggies</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Raw rice (dry weight before cooking)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Rajma (kidney beans) curry — boil rajma with onion, tomato, cumin, coriander. No frying.</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Sambar</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Carrot poriyal (grated carrot, mustard temper, curry leaf, fresh coconut)</span></div>
+        </div>
+        <div class="meal-note">🌿 Rajma is high-protein veg — excellent muscle recovery after Zumba.</div>
+        <div class="kcal-row"><span class="kcal-chip">~490 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- EVENING SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍎</div><div><div class="meal-time-lbl">Evening Snack · 6:00–7:00 PM (During Work)</div><div class="meal-time-name">Curd + Fruit</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">100g</span><span class="meal-item-text">Plain curd (no sugar)</span></div>
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 medium</span><span class="meal-item-text">Apple (approx 150g)</span></div>
+        </div>
+        <div class="meal-note snack-badge">🌿 Full veg snack. Filling and protein-rich for evening shift.</div>
+        <div class="kcal-row"><span class="kcal-chip">~155 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- DINNER -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🌙</div><div><div class="meal-time-lbl">Dinner · By 10:00 PM · No Rice</div><div class="meal-time-name">Ragi Dosa + Chutney + Curd</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">80g</span><span class="meal-item-text">Ragi flour (dry) — mix with water to thin batter, make 2 dosas on tawa with minimal oil</span></div>
+          <div class="meal-item-row"><span class="qty-badge">30g</span><span class="meal-item-text">Tomato chutney (onion, tomato, red chilli, small amount of oil, grind smooth)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Plain curd</span></div>
+        </div>
+        <div class="meal-note">🚫 Zero rice. 100% veg day done! Ragi is high calcium + iron — great for women.</div>
+        <div class="kcal-row"><span class="kcal-chip">~295 kcal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEDNESDAY -->
+  <div class="day-meal-card">
+    <div class="day-meal-hdr" onclick="toggleDay('wed')">
+      <div class="day-dot d-wed"></div>
+      <div class="day-label"><div class="day-name">Wednesday · Day 3</div><div class="day-date">April 29 · Legs & Glutes · ~1,200 kcal</div></div>
+      <div class="day-toggle" id="tog-wed">▼</div>
+    </div>
+    <div class="day-meals-body" id="day-wed">
+
+      <!-- PRE-WORKOUT -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">⚡</div><div><div class="meal-time-lbl">Pre-Workout Snack · 7:30–8:00 AM</div><div class="meal-time-name">Quick Energy Boost</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 pc</span><span class="meal-item-text">Small banana (approx 80g)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~70 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- BREAKFAST -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🥣</div><div><div class="meal-time-lbl">Breakfast · Post-Gym · 10:30–11 AM</div><div class="meal-time-name">Pintola Oats + Banana + Egg</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">50g</span><span class="meal-item-text">Pintola oats (soaked overnight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150ml</span><span class="meal-item-text">Low-fat milk</span></div>
+          <div class="meal-item-row"><span class="qty-badge">60g</span><span class="meal-item-text">Banana (½ medium) sliced on top</span></div>
+          <div class="meal-item-row"><span class="qty-badge">55g</span><span class="meal-item-text">1 whole boiled egg</span></div>
+        </div>
+        <div class="meal-note">💡 Soak moong dal Wednesday night for Thursday's pesarattu dinner batter.</div>
+        <div class="kcal-row"><span class="kcal-chip">~300 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- LUNCH -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍽️</div><div><div class="meal-time-lbl">Lunch · 2:00–2:30 PM</div><div class="meal-time-name">Rice + Egg Bhurji + Veggies</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Raw rice (dry weight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">110g</span><span class="meal-item-text">Egg bhurji — 2 eggs scrambled with 50g onion + 50g tomato, 1 tsp oil</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Dal or sambar</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Cabbage poriyal (shredded cabbage, mustard temper, green chilli, curry leaf, pinch turmeric)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~465 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- EVENING SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍎</div><div><div class="meal-time-lbl">Evening Snack · 6:00–7:00 PM (During Work)</div><div class="meal-time-name">Roasted Chana</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">30g</span><span class="meal-item-text">Roasted chana (chickpeas) — salt + pepper flavour, carry in a small box</span></div>
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 medium</span><span class="meal-item-text">Guava or orange (~150g) — Leg day recovery needs vitamin C</span></div>
+        </div>
+        <div class="meal-note snack-badge">💡 Roasted chana is high protein, crunchy, and available easily in Chennai. No cooking needed.</div>
+        <div class="kcal-row"><span class="kcal-chip">~170 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- DINNER -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🌙</div><div><div class="meal-time-lbl">Dinner · By 10:00 PM · No Rice</div><div class="meal-time-name">Pesarattu + Sambar</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">80g</span><span class="meal-item-text">Green moong dal (dry) — soaked overnight Wednesday night, grind to batter, makes 2 dosas on tawa, minimal oil</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Sambar (leftover from lunch)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">200ml</span><span class="meal-item-text">Moru (buttermilk — 200ml water + 50g curd + pinch salt + pinch cumin powder)</span></div>
+        </div>
+        <div class="meal-note">🚫 Zero rice. Pesarattu is high protein — perfect light dinner after leg day.</div>
+        <div class="kcal-row"><span class="kcal-chip">~325 kcal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THURSDAY -->
+  <div class="day-meal-card">
+    <div class="day-meal-hdr" onclick="toggleDay('thu')">
+      <div class="day-dot d-thu"></div>
+      <div class="day-label"><div class="day-name">Thursday · Day 4</div><div class="day-date">April 30 · Shoulders & Arms · ~1,210 kcal</div></div>
+      <div class="day-toggle" id="tog-thu">▼</div>
+    </div>
+    <div class="day-meals-body" id="day-thu">
+
+      <!-- PRE-WORKOUT -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">⚡</div><div><div class="meal-time-lbl">Pre-Workout Snack · 7:30–8:00 AM</div><div class="meal-time-name">Quick Energy Boost</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 pc</span><span class="meal-item-text">Small banana (approx 80g)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~70 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- BREAKFAST -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🥣</div><div><div class="meal-time-lbl">Breakfast · Post-Gym · 10:30–11 AM</div><div class="meal-time-name">Pintola Oats + Egg Whites</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">50g</span><span class="meal-item-text">Pintola oats (soaked overnight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150ml</span><span class="meal-item-text">Low-fat milk</span></div>
+          <div class="meal-item-row"><span class="qty-badge">60g</span><span class="meal-item-text">Banana (½ medium) sliced on top</span></div>
+          <div class="meal-item-row"><span class="qty-badge">66g</span><span class="meal-item-text">2 egg whites (discard yolk) — scramble and eat on the side for extra protein</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~305 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- LUNCH -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍽️</div><div><div class="meal-time-lbl">Lunch · 2:00–2:30 PM</div><div class="meal-time-name">Rice + Chicken Gravy + Veggies</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Raw rice (dry weight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">120g</span><span class="meal-item-text">Chicken (cooked weight) — pressure cook with onion, tomato, spices. No frying.</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Sambar</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Beetroot poriyal (grated beetroot, mustard temper, curry leaf, pinch turmeric — cook 5 min)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~500 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- EVENING SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍎</div><div><div class="meal-time-lbl">Evening Snack · 6:00–7:00 PM (During Work)</div><div class="meal-time-name">Fruit + Nuts</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 medium</span><span class="meal-item-text">Apple or pear (~150g)</span></div>
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">15g</span><span class="meal-item-text">10 almonds or 4 walnut halves</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~135 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- DINNER -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🌙</div><div><div class="meal-time-lbl">Dinner · By 10:00 PM · No Rice</div><div class="meal-time-name">Chapati + Chicken + Salad</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">120g</span><span class="meal-item-text">2 chapatis (60g dough each — weigh before rolling)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">80g</span><span class="meal-item-text">Leftover chicken from lunch (weigh cooked portion, reheat)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Cucumber + tomato salad with lemon juice + salt + coriander</span></div>
+        </div>
+        <div class="meal-note">💡 Reuse Thursday lunch chicken for dinner — saves time after work!</div>
+        <div class="kcal-row"><span class="kcal-chip">~310 kcal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIDAY -->
+  <div class="day-meal-card">
+    <div class="day-meal-hdr" onclick="toggleDay('fri')">
+      <div class="day-dot d-fri"></div>
+      <div class="day-label"><div class="day-name">Friday · Day 5</div><div class="day-date">May 1 · Cardio + Floor Work · ~1,195 kcal</div></div>
+      <div class="day-toggle" id="tog-fri">▼</div>
+    </div>
+    <div class="day-meals-body" id="day-fri">
+
+      <!-- PRE-WORKOUT -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">⚡</div><div><div class="meal-time-lbl">Pre-Workout Snack · 7:30–8:00 AM</div><div class="meal-time-name">Quick Energy Boost</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 pc</span><span class="meal-item-text">Small banana (approx 80g)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~70 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- BREAKFAST -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🥣</div><div><div class="meal-time-lbl">Breakfast · Post-Gym · 10:30–11 AM</div><div class="meal-time-name">Pintola Oats + Banana + Egg</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">50g</span><span class="meal-item-text">Pintola oats (soaked overnight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150ml</span><span class="meal-item-text">Low-fat milk</span></div>
+          <div class="meal-item-row"><span class="qty-badge">60g</span><span class="meal-item-text">Banana (½ medium) on top</span></div>
+          <div class="meal-item-row"><span class="qty-badge">55g</span><span class="meal-item-text">1 whole boiled egg</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~300 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- LUNCH -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍽️</div><div><div class="meal-time-lbl">Lunch · 2:00–2:30 PM</div><div class="meal-time-name">Rice + Egg Curry + Spinach</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Raw rice (dry weight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">110g</span><span class="meal-item-text">2 boiled eggs in simple onion-tomato curry (no deep fry)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Sambar or dal</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Keerai (spinach) kootu — boil spinach with moong dal, temper with mustard + garlic, add fresh coconut paste</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~465 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- EVENING SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍎</div><div><div class="meal-time-lbl">Evening Snack · 6:00–7:00 PM (During Work)</div><div class="meal-time-name">Curd + Fruit</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">100g</span><span class="meal-item-text">Plain curd (no sugar)</span></div>
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">80g</span><span class="meal-item-text">Papaya pieces (cut and carry in a box)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~95 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- DINNER -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🌙</div><div><div class="meal-time-lbl">Dinner · By 10:00 PM · No Rice</div><div class="meal-time-name">Chapati + Dal + Egg</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">120g</span><span class="meal-item-text">2 chapatis (60g dough each)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Dal (leftover from lunch) — easy reheat after work</span></div>
+          <div class="meal-item-row"><span class="qty-badge">55g</span><span class="meal-item-text">1 boiled egg on the side</span></div>
+        </div>
+        <div class="meal-note">🚫 Zero rice. Quick and easy dinner after work. Finish by 10 PM.</div>
+        <div class="kcal-row"><span class="kcal-chip">~370 kcal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SATURDAY -->
+  <div class="day-meal-card">
+    <div class="day-meal-hdr" onclick="toggleDay('sat')">
+      <div class="day-dot d-sat"></div>
+      <div class="day-label"><div class="day-name">Saturday · Day 6</div><div class="day-date">May 2 · HIIT Blast ⚡ · ~1,270 kcal</div></div>
+      <div class="day-toggle" id="tog-sat">▼</div>
+    </div>
+    <div class="day-meals-body" id="day-sat">
+
+      <!-- PRE-WORKOUT -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">⚡</div><div><div class="meal-time-lbl">Pre-Workout Snack · 7:30–8:00 AM</div><div class="meal-time-name">HIIT Fuel Up</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 pc</span><span class="meal-item-text">Small banana (approx 80g) — HIIT needs good fuel!</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~70 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- BREAKFAST -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🥣</div><div><div class="meal-time-lbl">Breakfast · After HIIT · 10:30–11 AM</div><div class="meal-time-name">Pintola Oats Power Bowl</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">50g</span><span class="meal-item-text">Pintola oats (soaked overnight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150ml</span><span class="meal-item-text">Low-fat milk</span></div>
+          <div class="meal-item-row"><span class="qty-badge">10g</span><span class="meal-item-text">Flaxseeds or chia seeds stirred in (omega-3, recovery boost)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">55g</span><span class="meal-item-text">1 whole boiled egg</span></div>
+          <div class="meal-item-row"><span class="qty-badge">15g</span><span class="meal-item-text">10 almonds on the side</span></div>
+        </div>
+        <div class="meal-note">💡 HIIT is the hardest day — this bigger breakfast supports muscle recovery.</div>
+        <div class="kcal-row"><span class="kcal-chip">~360 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- LUNCH -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍽️</div><div><div class="meal-time-lbl">Lunch · 2:00–2:30 PM</div><div class="meal-time-name">Rice + Chicken + Veggies</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Raw rice (dry weight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">120g</span><span class="meal-item-text">Chicken curry (cooked weight) — onion, tomato, coriander, no frying</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Sambar</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Onion-tomato koshambir (raw onion + tomato + cucumber finely chopped, lemon juice, salt, coriander — no cooking needed)</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~490 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- EVENING SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍎</div><div><div class="meal-time-lbl">Evening Snack · 6:00–7:00 PM (During Work)</div><div class="meal-time-name">Boiled Egg + Fruit</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">55g</span><span class="meal-item-text">1 boiled egg (carry from morning batch)</span></div>
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 medium</span><span class="meal-item-text">Apple (~150g)</span></div>
+        </div>
+        <div class="meal-note snack-badge">💪 Post-HIIT recovery continues — protein + fruit is ideal here.</div>
+        <div class="kcal-row"><span class="kcal-chip">~150 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- DINNER -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🌙</div><div><div class="meal-time-lbl">Dinner · By 10:00 PM · No Rice</div><div class="meal-time-name">Ragi Dosa + Sambar + Curd</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">80g</span><span class="meal-item-text">Ragi flour (dry) — makes 2 thin dosas on tawa, very minimal oil</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Sambar (leftover from lunch, reheat)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Plain curd</span></div>
+        </div>
+        <div class="meal-note">🚫 Zero rice. Keep dinner light — body still burning after HIIT.</div>
+        <div class="kcal-row"><span class="kcal-chip">~300 kcal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUNDAY -->
+  <div class="day-meal-card">
+    <div class="day-meal-hdr" onclick="toggleDay('sun')">
+      <div class="day-dot d-sun"></div>
+      <div class="day-label"><div class="day-name">Sunday · Day 7</div><div class="day-date">May 3 · Rest Day 🧘 · ~1,090 kcal</div></div>
+      <div class="day-toggle" id="tog-sun">▼</div>
+    </div>
+    <div class="day-meals-body" id="day-sun">
+
+      <!-- BREAKFAST (no gym today — slightly later) -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🥣</div><div><div class="meal-time-lbl">Breakfast · 9:00–9:30 AM (Rest Day – No Gym)</div><div class="meal-time-name">Pintola Oats + Fruits</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">50g</span><span class="meal-item-text">Pintola oats (soaked overnight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150ml</span><span class="meal-item-text">Low-fat milk</span></div>
+          <div class="meal-item-row"><span class="qty-badge">60g</span><span class="meal-item-text">Banana (½) + 80g papaya pieces on top</span></div>
+          <div class="meal-item-row"><span class="qty-badge">55g</span><span class="meal-item-text">1 boiled egg on the side</span></div>
+        </div>
+        <div class="meal-note">🛒 Use Sunday morning to buy Week 2 groceries! Message me your Week 1 updates so I can plan next week.</div>
+        <div class="kcal-row"><span class="kcal-chip">~310 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- LUNCH -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍽️</div><div><div class="meal-time-lbl">Lunch · 2:00–2:30 PM</div><div class="meal-time-name">Rice + Dal + Curd (Rest Day Comfort)</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Raw rice (dry weight)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Toor dal / sambar (big bowl)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Plain curd</span></div>
+          <div class="meal-item-row"><span class="qty-badge">150g</span><span class="meal-item-text">Raw mango salad (raw mango grated fine + onion + green chilli + salt + coriander — refreshing Tamil style)</span></div>
+        </div>
+        <div class="meal-note">🎉 Rest day comfort meal! Rice + dal + curd is the perfect light Sunday lunch.</div>
+        <div class="kcal-row"><span class="kcal-chip">~405 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- EVENING SNACK -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🍎</div><div><div class="meal-time-lbl">Evening Snack · 6:00–7:00 PM (During Work)</div><div class="meal-time-name">Light Fruit Snack</div></div></div>
+        <div class="meal-items" style="background:#F5EEFF;">
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">1 medium</span><span class="meal-item-text">Orange or sweet lime (~150g) — great for Sunday mood boost</span></div>
+          <div class="meal-item-row"><span class="qty-badge" style="background:#7B35C0;">15g</span><span class="meal-item-text">10 almonds</span></div>
+        </div>
+        <div class="kcal-row"><span class="kcal-chip">~120 kcal</span></div>
+      </div>
+      <div class="meal-divider"></div>
+
+      <!-- DINNER -->
+      <div class="meal-row">
+        <div class="meal-time-row"><div class="meal-time-icon">🌙</div><div><div class="meal-time-lbl">Dinner · By 10:00 PM · No Rice</div><div class="meal-time-name">Chapati + Egg Bhurji + Salad</div></div></div>
+        <div class="meal-items">
+          <div class="meal-item-row"><span class="qty-badge">120g</span><span class="meal-item-text">2 chapatis (60g dough each)</span></div>
+          <div class="meal-item-row"><span class="qty-badge">110g</span><span class="meal-item-text">Egg bhurji — 2 eggs with 50g onion + 50g tomato + green chilli, 1 tsp oil</span></div>
+          <div class="meal-item-row"><span class="qty-badge">100g</span><span class="meal-item-text">Cucumber + carrot salad with lemon juice + salt</span></div>
+        </div>
+        <div class="meal-note">🚫 Zero rice. End Week 1 strong! You did it! 💪</div>
+        <div class="kcal-row"><span class="kcal-chip">~350 kcal</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="background:#FFF0F0;border-color:#FFCCCC;">
+    <div class="card-ttl" style="color:var(--r);"><i>🚫</i>Week 1 Strict Rules</div>
+    <div style="font-size:12px;line-height:1.9;color:#5A1A1A;">
+      ❌ No rice at dinner — any day<br>
+      ❌ No sugar in tea or coffee<br>
+      ❌ No outside food this week<br>
+      ❌ No fried food — chips, bajji, bonda<br>
+      ❌ Nothing after 10:30 PM (adjusted for your shift timing)
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SHOPPING ══════════ -->
+<div class="panel" id="panel-shop">
+  <div class="week-hdr">
+    <div class="week-hdr-top">
+      <div class="week-title">🛒 Week 1 Shopping</div>
+      <div class="week-badge">Buy Today — Apr 26</div>
+    </div>
+    <div class="week-note">Buy everything today so you're 100% ready from Day 1 tomorrow. Tap to mark as bought ✓</div>
+  </div>
+  <div class="card">
+    <div class="shop-section">
+      <div class="shop-cat">🥣 Staples</div>
+      <div class="shop-grid">
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Pintola Oats</div><div class="shop-qty">500g pack</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Low-fat Milk</div><div class="shop-qty">7 × 200ml pouches</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Whole Wheat Atta</div><div class="shop-qty">1 kg</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Ragi Flour</div><div class="shop-qty">500g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Toor Dal</div><div class="shop-qty">500g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Green Moong Dal</div><div class="shop-qty">250g (pesarattu)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Rajma (Kidney Beans)</div><div class="shop-qty">250g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">White Rice</div><div class="shop-qty">700g (100g × 7 days)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Roasted Chana</div><div class="shop-qty">100g pack</div></div></div>
+      </div>
+    </div>
+    <div class="shop-section">
+      <div class="shop-cat">🥚 Protein</div>
+      <div class="shop-grid">
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Eggs</div><div class="shop-qty">20 eggs</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Chicken</div><div class="shop-qty">400g (Thu 200g + Sat 120g + leftover)</div></div></div>
+      </div>
+    </div>
+    <div class="shop-section">
+      <div class="shop-cat">🥦 Vegetables</div>
+      <div class="shop-grid">
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Onions</div><div class="shop-qty">500g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Tomatoes</div><div class="shop-qty">500g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Carrots</div><div class="shop-qty">300g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">French Beans</div><div class="shop-qty">250g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Cabbage</div><div class="shop-qty">300g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Keerai (Spinach)</div><div class="shop-qty">200g (1 bunch)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Cucumber</div><div class="shop-qty">4 pcs (~400g)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Beetroot</div><div class="shop-qty">2 pcs (~200g)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Raw Mango</div><div class="shop-qty">1 pc (Sunday salad)</div></div></div>
+      </div>
+    </div>
+    <div class="shop-section">
+      <div class="shop-cat">🍌 Fruits</div>
+      <div class="shop-grid">
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Bananas</div><div class="shop-qty">2 bunches (~1.2 kg)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Apples</div><div class="shop-qty">5–6 nos</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Papaya</div><div class="shop-qty">½ piece (~300g)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Oranges / Sweet Lime</div><div class="shop-qty">3–4 nos</div></div></div>
+      </div>
+    </div>
+    <div class="shop-section">
+      <div class="shop-cat">🧂 Extras</div>
+      <div class="shop-grid">
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Curd / Yogurt</div><div class="shop-qty">700g (week supply)</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Flaxseeds / Chia Seeds</div><div class="shop-qty">100g pack</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Almonds</div><div class="shop-qty">100g</div></div></div>
+        <div class="shop-item" onclick="toggleShop(this)"><div class="shop-cb"></div><div><div class="shop-name">Green Tea / Coffee</div><div class="shop-qty">1 pack — no sugar</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="background:var(--yl);border-color:#FFD080;">
+    <div class="card-ttl" style="color:#8A6000;"><i>💡</i>Prep Tips — Shift Worker Edition</div>
+    <div class="rule"><i>🐔</i><p>Portion chicken into bags (Thu 200g + Sat 120g). Freeze. Take out the night before you need it.</p></div>
+    <div class="rule"><i>🥚</i><p>Boil 4–5 eggs every 2 days. Store in fridge. Quick grab for pre-workout or snack at work.</p></div>
+    <div class="rule"><i>🥣</i><p>Every night before bed (around 11 PM): measure 50g oats in a bowl, pour 150ml milk, cover, keep in fridge. Ready by 10:30 AM.</p></div>
+    <div class="rule"><i>🍱</i><p>Pack your work snack (apple + almonds / curd box) every morning before you leave for driving class.</p></div>
+    <div class="rule"><i>📱</i><p>Tell me daily what you ate and skipped. I'll build Week 2 based on your feedback this Sunday!</p></div>
+  </div>
+</div>
+
+<!-- ══════════ WORKOUT ══════════ -->
+<div class="panel" id="panel-workout">
+  <div class="card" style="background:var(--gl);border-color:#A0D8D2;">
+    <div style="font-size:12px;font-weight:800;color:var(--g);margin-bottom:6px;">📋 6-Day Split · 8:00–9:30 AM</div>
+    <div style="font-size:12px;color:#3A5A55;line-height:1.9;"><b>Mon</b> — Chest & Back 💪 &nbsp; <b>Tue</b> — Zumba + Core 💃<br><b>Wed</b> — Legs & Glutes 🦵 &nbsp; <b>Thu</b> — Shoulders & Arms 🏋️<br><b>Fri</b> — Cardio + Floor 🔥 &nbsp; <b>Sat</b> — HIIT Blast ⚡<br><b>Sun</b> — Active Rest 🧘</div>
+    <div style="margin-top:8px;padding:8px;background:rgba(11,123,111,.08);border-radius:8px;font-size:11px;color:var(--g);font-weight:700;">⏰ Gym 8:00–9:30 AM · Pre-Workout snack at 7:30 AM · Post-Workout breakfast at 10:30 AM</div>
+  </div>
+  <div class="wd"><div class="wd-head"><div class="wd-badge mon"><div class="em">💪</div><div class="da">MON</div></div><div class="wd-main"><div class="wd-title">Chest & Back</div><div class="wd-badges"><span class="wbadge bw">Weights</span></div><div class="wd-dur">⏱ 8:00–9:30 AM · 45–50 min</div></div></div>
+    <div class="wd-body"><div class="ex-sec-title">💪 Chest</div><div class="ex-row"><span class="ex-name">Dumbbell Chest Press</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Dumbbell Chest Flyes</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Push-Ups</span><span class="ex-sets">3 × 15</span></div><div class="ex-sec-title">🏋️ Back</div><div class="ex-row"><span class="ex-name">Lat Pulldown</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Seated Cable Row</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Bent-Over Row</span><span class="ex-sets">3 × 10</span></div><div class="kcal">🔥 ~280–320 kcal</div></div>
+  </div>
+  <div class="wd"><div class="wd-head"><div class="wd-badge tue"><div class="em">💃</div><div class="da">TUE</div></div><div class="wd-main"><div class="wd-title">Zumba + Core</div><div class="wd-badges"><span class="wbadge bz">Zumba</span><span class="wbadge bc">Core</span></div><div class="wd-dur">⏱ 8:00–9:30 AM · 60–70 min</div></div></div>
+    <div class="wd-body"><div class="ex-sec-title">💃 Zumba Full Class</div><div class="ex-row"><span class="ex-name">Full Zumba session</span><span class="ex-sets">45–60 min</span></div><div class="ex-sec-title">🔥 Core Finisher</div><div class="ex-row"><span class="ex-name">Crunches</span><span class="ex-sets">3 × 20</span></div><div class="ex-row"><span class="ex-name">Leg Raises</span><span class="ex-sets">3 × 15</span></div><div class="ex-row"><span class="ex-name">Plank Hold</span><span class="ex-sets">3 × 30 sec</span></div><div class="ex-row"><span class="ex-name">Bicycle Crunches</span><span class="ex-sets">3 × 20</span></div><div class="kcal">🔥 ~450–550 kcal</div></div>
+  </div>
+  <div class="wd"><div class="wd-head"><div class="wd-badge wed"><div class="em">🦵</div><div class="da">WED</div></div><div class="wd-main"><div class="wd-title">Legs & Glutes</div><div class="wd-badges"><span class="wbadge bw">Weights</span></div><div class="wd-dur">⏱ 8:00–9:30 AM · 45–50 min</div></div></div>
+    <div class="wd-body"><div class="ex-row"><span class="ex-name">Squats</span><span class="ex-sets">4 × 15</span></div><div class="ex-row"><span class="ex-name">Dumbbell Lunges</span><span class="ex-sets">3 × 12 each</span></div><div class="ex-row"><span class="ex-name">Leg Press</span><span class="ex-sets">3 × 15</span></div><div class="ex-row"><span class="ex-name">Hip Thrusts</span><span class="ex-sets">4 × 15</span></div><div class="ex-row"><span class="ex-name">Leg Curl</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Wall Sit</span><span class="ex-sets">3 × 45 sec</span></div><div class="kcal">🔥 ~300–360 kcal</div></div>
+  </div>
+  <div class="wd"><div class="wd-head"><div class="wd-badge thu"><div class="em">🏋️</div><div class="da">THU</div></div><div class="wd-main"><div class="wd-title">Shoulders & Arms</div><div class="wd-badges"><span class="wbadge bw">Weights</span></div><div class="wd-dur">⏱ 8:00–9:30 AM · 45–50 min</div></div></div>
+    <div class="wd-body"><div class="ex-sec-title">💪 Shoulders</div><div class="ex-row"><span class="ex-name">Shoulder Press</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Lateral Raises</span><span class="ex-sets">3 × 15</span></div><div class="ex-row"><span class="ex-name">Front Raises</span><span class="ex-sets">3 × 12</span></div><div class="ex-sec-title">💪 Arms</div><div class="ex-row"><span class="ex-name">Bicep Curls</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Hammer Curls</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Tricep Dips</span><span class="ex-sets">3 × 15</span></div><div class="ex-row"><span class="ex-name">Tricep Extension</span><span class="ex-sets">3 × 12</span></div><div class="kcal">🔥 ~260–300 kcal</div></div>
+  </div>
+  <div class="wd"><div class="wd-head"><div class="wd-badge fri"><div class="em">🔥</div><div class="da">FRI</div></div><div class="wd-main"><div class="wd-title">Cardio + Floor Work</div><div class="wd-badges"><span class="wbadge bc">Cardio</span><span class="wbadge bh">Floor</span></div><div class="wd-dur">⏱ 8:00–9:30 AM · 50–60 min</div></div></div>
+    <div class="wd-body"><div class="ex-sec-title">🏃 Treadmill Intervals 20 min</div><div class="ex-row"><span class="ex-name">2 min jog → 1 min walk</span><span class="ex-sets">20 min</span></div><div class="ex-sec-title">🧘 Floor Circuit 3 Rounds</div><div class="ex-row"><span class="ex-name">Burpees</span><span class="ex-sets">× 10</span></div><div class="ex-row"><span class="ex-name">Mountain Climbers</span><span class="ex-sets">× 20</span></div><div class="ex-row"><span class="ex-name">Glute Bridges</span><span class="ex-sets">× 20</span></div><div class="ex-row"><span class="ex-name">Superman Hold</span><span class="ex-sets">× 15</span></div><div class="ex-row"><span class="ex-name">Russian Twists</span><span class="ex-sets">× 20</span></div><div class="kcal">🔥 ~380–450 kcal</div></div>
+  </div>
+  <div class="wd"><div class="wd-head"><div class="wd-badge sat"><div class="em">⚡</div><div class="da">SAT</div></div><div class="wd-main"><div class="wd-title">HIIT Blast</div><div class="wd-badges"><span class="wbadge bh">HIIT</span><span class="wbadge bw">Full Body</span></div><div class="wd-dur">⏱ 8:00–9:30 AM · 50–60 min</div></div></div>
+    <div class="wd-body"><div class="ex-sec-title">⚡ HIIT · 40 sec ON / 20 sec REST · 4 Rounds</div><div class="ex-row"><span class="ex-name">Jump Squats</span><span class="ex-sets">40 sec</span></div><div class="ex-row"><span class="ex-name">High Knees</span><span class="ex-sets">40 sec</span></div><div class="ex-row"><span class="ex-name">Burpees</span><span class="ex-sets">40 sec</span></div><div class="ex-row"><span class="ex-name">Push-Ups</span><span class="ex-sets">40 sec</span></div><div class="ex-row"><span class="ex-name">Box Step-Ups</span><span class="ex-sets">40 sec</span></div><div class="ex-note">💡 Rest 2 min between rounds</div><div class="ex-sec-title">🏋️ Strength Finisher</div><div class="ex-row"><span class="ex-name">Deadlifts</span><span class="ex-sets">3 × 12</span></div><div class="ex-row"><span class="ex-name">Squat to Press</span><span class="ex-sets">3 × 12</span></div><div class="kcal">🔥 ~500–600 kcal</div></div>
+  </div>
+  <div class="wd"><div class="wd-head"><div class="wd-badge sun"><div class="em">🧘</div><div class="da">SUN</div></div><div class="wd-main"><div class="wd-title">Active Rest</div><div class="wd-badges"><span class="wbadge br">Recovery</span></div><div class="wd-dur">⏱ 20–30 min · No gym</div></div></div>
+    <div class="wd-body"><div class="ex-row"><span class="ex-name">Light walk / stretch / yoga</span><span class="ex-sets">20–30 min</span></div><div class="ex-note">⚠️ Rest is mandatory. Muscles burn fat during recovery! You've earned it after 6 hard days.</div></div>
+  </div>
+</div>
+
+<!-- ══════════ TRACK ══════════ -->
+<div class="panel" id="panel-track">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+    <div style="font-size:16px;font-weight:900;">Daily Checklist</div>
+    <div style="background:var(--g);color:#fff;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:800;" id="todayLbl">Day 1</div>
+  </div>
+  <div id="checkWrap"></div>
+  <div class="card">
+    <div class="card-ttl"><i>🔥</i>50-Day Streak</div>
+    <div class="streak-grid" id="streakGrid"></div>
+    <div style="text-align:center;font-size:11px;color:var(--muted);font-weight:700;margin-top:4px;">🟢 Done · 🟠 Today · ⬜ Upcoming</div>
+  </div>
+</div>
+
+<!-- ══════════ WEIGHT ══════════ -->
+<div class="panel" id="panel-weight">
+  <div class="card">
+    <div class="card-ttl"><i>⚖️</i>Log Today's Weight</div>
+    <div style="font-size:12px;color:var(--muted);font-weight:600;margin-bottom:10px;">Every morning after bathroom, before eating. Day 1 starts tomorrow Apr 27.</div>
+    <div class="w-form">
+      <input type="number" class="w-input" id="wIn" placeholder="e.g. 69.5" step="0.1" min="30" max="150">
+      <button class="w-btn" onclick="logW()">LOG ✓</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-ttl"><i>📊</i>Weight Log</div>
+    <div id="wLog"><div style="text-align:center;color:var(--muted);padding:20px;font-size:13px;font-weight:600;">Log your first weight tomorrow morning! 💪</div></div>
+  </div>
+  <div class="card" style="background:var(--gl);border-color:var(--g);">
+    <div class="card-ttl"><i>🎯</i>Milestones</div>
+    <div id="msWrap">
+      <div class="ms-row"><div style="font-size:12px;font-weight:700;">🥉 −2 kg → 68 kg</div><div style="font-size:12px;font-weight:800;color:var(--g);">2 kg to go</div></div>
+      <div class="ms-row"><div style="font-size:12px;font-weight:700;">🥈 −5 kg → 65 kg</div><div style="font-size:12px;font-weight:800;color:var(--g);">5 kg to go</div></div>
+      <div class="ms-row"><div style="font-size:12px;font-weight:700;">🥇 −10 kg → 60 kg</div><div style="font-size:12px;font-weight:800;color:var(--g);">10 kg to go</div></div>
+      <div class="ms-row"><div style="font-size:12px;font-weight:700;">🏆 −15 kg → 55 kg</div><div style="font-size:12px;font-weight:800;color:var(--g);">15 kg to go</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const START = new Date('2026-04-27T00:00:00');
+const SW = 70;
+let st = JSON.parse(localStorage.getItem('thl_v7') || 'null') || { weights: [], checks: {} };
+function save() { localStorage.setItem('thl_v7', JSON.stringify(st)); }
+
+function dayNum() {
+  const now = new Date();
+  const diff = Math.floor((now - START) / 86400000) + 1;
+  if (diff < 1) return null;
+  return Math.min(50, diff);
+}
+
+function todayKey() { return new Date().toISOString().split('T')[0]; }
+
+function updateHeader() {
+  const d = dayNum();
+  if (d === null) {
+    document.getElementById('pLbl').textContent = 'Starts Tomorrow — Apr 27!';
+    document.getElementById('pPct').textContent = '0%';
+    document.getElementById('pFill').style.width = '0%';
+    document.getElementById('dN').textContent = '—';
+  } else {
+    const pct = Math.round((d / 50) * 100);
+    document.getElementById('pLbl').textContent = `Day ${d} of 50`;
+    document.getElementById('pPct').textContent = pct + '%';
+    document.getElementById('pFill').style.width = pct + '%';
+    document.getElementById('dN').textContent = d;
+  }
+  const cur = st.weights.length ? st.weights[st.weights.length - 1].w : SW;
+  document.getElementById('cW').textContent = cur;
+  document.getElementById('lW').textContent = Math.max(0, SW - cur).toFixed(1);
+}
+
+function show(id, tid) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  document.getElementById(tid).classList.add('active');
+}
+
+function toggleDay(id) {
+  const body = document.getElementById('day-' + id);
+  const tog = document.getElementById('tog-' + id);
+  body.classList.toggle('open');
+  tog.classList.toggle('open');
+}
+
+function toggleShop(el) {
+  el.classList.toggle('bought');
+  el.querySelector('.shop-cb').classList.toggle('on');
+  if (el.querySelector('.shop-cb').classList.contains('on')) {
+    el.querySelector('.shop-cb').textContent = '✓';
+  } else {
+    el.querySelector('.shop-cb').textContent = '';
+  }
+}
+
+const tasks = [
+  { id: 'gym',      lbl: '🏋️ Completed gym / workout' },
+  { id: 'presnack', lbl: '⚡ Had pre-workout banana' },
+  { id: 'oats',     lbl: '🥣 Had Pintola oats — 50g measured' },
+  { id: 'water',    lbl: '💧 Drank 3 litres of water' },
+  { id: 'lunch',    lbl: '🍽️ Proper lunch — rice 100g dry max' },
+  { id: 'wsnack',   lbl: '🍎 Had work snack (fruit + nuts / curd)' },
+  { id: 'dinner',   lbl: '🌙 Light dinner by 10 PM' },
+  { id: 'norice',   lbl: '🍚 Zero rice at dinner' },
+  { id: 'nosugar',  lbl: '🚫 No sugar in tea or coffee' },
+  { id: 'nojunk',   lbl: '✅ No fried or junk food' },
+  { id: 'oatsprep', lbl: '🌙 Soaked oats for tomorrow night' },
+];
+
+function renderCheck() {
+  const d = dayNum();
+  const k = todayKey();
+  const ch = st.checks[k] || {};
+  const done = Object.values(ch).filter(Boolean).length;
+
+  document.getElementById('todayLbl').textContent = d ? `Day ${d}` : 'Starts Tomorrow';
+
+  let html = `<div class="cl-day"><div class="cl-head">
+    <div class="cl-title">${new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short' })}</div>
+    <div class="cl-score">${d ? `${done}/${tasks.length}` : 'Apr 27 →'}</div>
+  </div>`;
+
+  if (!d) {
+    html += `<div style="text-align:center;padding:16px 0;font-size:13px;color:var(--muted);font-weight:700;">Checklist unlocks tomorrow — Day 1! 🚀</div>`;
+  } else {
+    tasks.forEach(t => {
+      const on = !!ch[t.id];
+      html += `<div class="cl-row" onclick="toggle('${k}','${t.id}')">
+        <div class="chk ${on ? 'on' : ''}">${on ? '✓' : ''}</div>
+        <div class="cl-lbl ${on ? 'done' : ''}">${t.lbl}</div>
+      </div>`;
+    });
+  }
+  html += '</div>';
+
+  if (d && done === tasks.length) {
+    html += `<div style="text-align:center;padding:16px;background:var(--gl);border-radius:14px;margin-bottom:12px;">
+      <div style="font-size:36px;margin-bottom:6px;">🏆</div>
+      <div style="font-size:15px;font-weight:900;color:var(--g);">Perfect Day! You're on fire!</div>
+    </div>`;
+  }
+
+  document.getElementById('checkWrap').innerHTML = html;
+  renderStreak();
+}
+
+function toggle(k, id) {
+  if (!st.checks[k]) st.checks[k] = {};
+  st.checks[k][id] = !st.checks[k][id];
+  save(); renderCheck();
+}
+
+function renderStreak() {
+  const dn = dayNum() || 0;
+  let html = '';
+  for (let d = 1; d <= 50; d++) {
+    const dk = new Date(START.getTime() + (d - 1) * 86400000).toISOString().split('T')[0];
+    const done = Object.values(st.checks[dk] || {}).filter(Boolean).length;
+    let cls = 'soon', txt = d;
+    if (d === dn) { cls = 'today'; }
+    else if (d < dn && done >= 7) { cls = 'done'; txt = '✓'; }
+    html += `<div class="sd ${cls}">${txt}</div>`;
+  }
+  document.getElementById('streakGrid').innerHTML = html;
+}
+
+function logW() {
+  const v = parseFloat(document.getElementById('wIn').value);
+  if (isNaN(v) || v < 30 || v > 200) { alert('Enter a valid weight like 69.5'); return; }
+  const k = todayKey();
+  const i = st.weights.findIndex(w => w.d === k);
+  if (i >= 0) st.weights[i].w = v; else st.weights.push({ d: k, w: v });
+  save();
+  document.getElementById('wIn').value = '';
+  renderWeight(); updateHeader();
+}
+
+function renderWeight() {
+  const el = document.getElementById('wLog');
+  if (!st.weights.length) {
+    el.innerHTML = '<div style="text-align:center;color:var(--muted);padding:20px;font-size:13px;font-weight:600;">Log your first weight tomorrow morning! 💪</div>';
+    return;
+  }
+  const s = [...st.weights].sort((a, b) => b.d.localeCompare(a.d));
+  el.innerHTML = s.map((e, i) => {
+    const prev = s[i + 1]; let delta = '';
+    if (prev) {
+      const df = (e.w - prev.w).toFixed(1);
+      delta = `<span class="w-delta ${df <= 0 ? 'ddown' : 'dup'}">${df <= 0 ? '▼' : '▲'}${Math.abs(df)}</span>`;
+    }
+    const dt = new Date(e.d).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
+    return `<div class="w-entry">
+      <div class="w-date">${dt}</div>
+      <div style="display:flex;align-items:center;gap:8px;">${delta}<div class="w-kg">${e.w} kg</div></div>
+    </div>`;
+  }).join('');
+
+  const cur = st.weights[st.weights.length - 1].w;
+  const ms = [{ l: '−2 kg', t: SW - 2, e: '🥉' }, { l: '−5 kg', t: SW - 5, e: '🥈' }, { l: '−10 kg', t: SW - 10, e: '🥇' }, { l: '−15 kg', t: SW - 15, e: '🏆' }];
+  document.getElementById('msWrap').innerHTML = ms.map(m => {
+    const r = cur <= m.t, rem = Math.max(0, cur - m.t).toFixed(1);
+    return `<div class="ms-row">
+      <div style="font-size:12px;font-weight:700;">${m.e} ${m.l} → ${m.t} kg</div>
+      <div style="font-size:12px;font-weight:800;color:${r ? '#2E9C5A' : 'var(--g)'};">${r ? '✅ Done!' : rem + ' kg left'}</div>
+    </div>`;
+  }).join('');
+}
+
+updateHeader(); renderCheck(); renderWeight();
+</script>
+</body>
+</html>
